@@ -1,0 +1,558 @@
+ <!DOCTYPE html> <html> <head> <meta charset="UTF-8">  <title>V31-07a Michelson-Interferometer mit Mikrowellen</title>  <meta name="apple-mobile-web-app-capable" content="yes"/> <meta name="apple-mobile-web-app-status-bar-style" content="black"> <link rel="apple-touch-icon" href="https://tetfolio.fu-berlin.de/static/tetfolio/img/tet_logo_small.png"/> <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">  <link rel="stylesheet" type="text/css" href="../inc/jquery-ui-1.12.1/jquery-ui.min.css"> <link rel="stylesheet" type="text/css" href="../static/tetfolio/webstyles.all.min.css"> <link rel="stylesheet" type="text/css" href="../tf/renderTETcss.css">  <style type="text/css">
+  .tetpage {
+	  border: initial;
+	  margin: 0px auto;
+  }
+</style>   <script src="../inc/jquery-3.2.1.min.js"></script> <script src="../inc/jquery-ui-1.12.1/jquery-ui.min.js"></script> <script src="../static/tetfolio/webscript.all.min.js"></script>  <script type="text/x-mathjax-config">
+    // we use "manual" config to get wget working ...
+	// http://docs.mathjax.org/en/latest/config-files.html
+  MathJax.Hub.Config({
+    skipStartupTypeset: true,
+    messageStyle: "none",
+    tex2jax: {
+       inlineMath:  [ ['$','$'],   ['\\(','\\)']],
+       displayMath: [ ['$$','$$'], ['\\[','\\]']]
+//        ignoreClass: "dynexpr"
+    },
+	//tex2jax: {inlineMath: [['\\(','\\)']]},
+	config: ["MMLorHTML.js"],
+	jax: ["input/TeX","input/MathML","output/HTML-CSS","output/NativeMML"],
+	extensions: ["tex2jax.js","mml2jax.js"], //seb -- commenting out does not hep !?!? see below...  ,"MathMenu.js","MathZoom.js"],
+
+	TeX: {
+       extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+    },
+    "HTML-CSS": {                       // http://docs.mathjax.org/en/latest/options/output-processors/HTML-CSS.html
+       mtextFontInherit: true, //20180222 https://groups.google.com/forum/#!topic/mathjax-users/nokFUnsyDxg
+    }
+  });
+  // https://github.com/mathjax/MathJax/wiki/LFAQ----less-frequently-asked-questions#how-can-i-disable-mathzoomjs-and-mathmenujs
+  //MathJax.Hub.Startup.MenuZoom = function () {};
+</script> <script type="text/javascript" src="../inc/MathJax/MathJax.js"></script>  <link rel="shortcut icon" href="../favicon.ico"/> <link rel="shortcut icon" href="../inc/MathJax/extensions/toMathML.js"/> <link rel="shortcut icon" href="../favicon.ico"/>  </head>   <body class="web">  <div id="mainPane" class="tetpage" itemtitle="V31-07a Michelson-Interferometer mit Mikrowellen" tetfoliopage="tf_1446529" tetfoliopage_ii="ii_1046720" tetfoliobook_ii="ii_691005" tfowner="juek" iiowner="juek"  leftpage="1507662" rightpage="1514889"  itemtype="TETpage"  page_index="166" page_count="690" hidetitle=1         >     <div class="tetitem tetfolio_item  "  itemtype="TETbox" itemtitle="" tfowner="juek" iiowner="juek"                    style="top: 0px; left: 0px; width: 1025px; height: 683px; position: absolute;" id="pl_1507088" ii_id="ii_1092797">   <div class="tetitem_inner tetfolio_item-inner"   >          <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="bg3.jpg" tfowner="juek" iiowner="juek"                    style="top: 0px; left: 0px; width: 1024px; height: 683px; position: absolute;" id="pl_1513565" ii_id="ii_1097932">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1097932.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="TETbox" itemtitle="serie" tfowner="juek" iiowner="juek"    tetbox_dia=1 tetbox_dia_noclick=1               style="top: 210px; left: 603px; width: 474px; height: 411px; position: absolute;" id="pl_1507193" ii_id="ii_1092902">   <div class="tetitem_inner tetfolio_item-inner"   >          <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0001.jpg" tfowner="juek" iiowner="juek"                    style="top: 0px; left: 0px; width: 163px; height: 401px; position: absolute;" id="pl_1507195" ii_id="ii_1092904">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092904.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0002.jpg" tfowner="juek" iiowner="juek"                    style="top: 98px; left: 135px; width: 163px; height: 401px; position: absolute;" id="pl_1507194" ii_id="ii_1092903">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092903.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0003.jpg" tfowner="juek" iiowner="juek"                    style="top: 148px; left: 185px; width: 163px; height: 401px; position: absolute;" id="pl_1507202" ii_id="ii_1092911">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092911.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0004.jpg" tfowner="juek" iiowner="juek"                    style="top: 198px; left: 235px; width: 163px; height: 401px; position: absolute;" id="pl_1507198" ii_id="ii_1092907">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092907.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0005.jpg" tfowner="juek" iiowner="juek"                    style="top: 248px; left: 285px; width: 163px; height: 401px; position: absolute;" id="pl_1507196" ii_id="ii_1092905">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092905.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0006.jpg" tfowner="juek" iiowner="juek"                    style="top: 298px; left: 335px; width: 163px; height: 401px; position: absolute;" id="pl_1507199" ii_id="ii_1092908">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092908.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0007.jpg" tfowner="juek" iiowner="juek"                    style="top: 348px; left: 385px; width: 163px; height: 401px; position: absolute;" id="pl_1507197" ii_id="ii_1092906">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092906.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0008.jpg" tfowner="juek" iiowner="juek"                    style="top: 398px; left: 435px; width: 163px; height: 401px; position: absolute;" id="pl_1507200" ii_id="ii_1092909">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092909.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0009.jpg" tfowner="juek" iiowner="juek"                    style="top: 448px; left: 485px; width: 163px; height: 401px; position: absolute;" id="pl_1507203" ii_id="ii_1092912">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092912.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0010.jpg" tfowner="juek" iiowner="juek"                    style="top: 498px; left: 535px; width: 163px; height: 401px; position: absolute;" id="pl_1507201" ii_id="ii_1092910">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092910.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0011.jpg" tfowner="juek" iiowner="juek"                    style="top: 548px; left: 585px; width: 163px; height: 401px; position: absolute;" id="pl_1507206" ii_id="ii_1092914">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092914.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0012.jpg" tfowner="juek" iiowner="juek"                    style="top: 598px; left: 635px; width: 163px; height: 401px; position: absolute;" id="pl_1507205" ii_id="ii_1092915">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092915.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0013.jpg" tfowner="juek" iiowner="juek"                    style="top: 648px; left: 685px; width: 163px; height: 401px; position: absolute;" id="pl_1507207" ii_id="ii_1092916">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092916.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0014.jpg" tfowner="juek" iiowner="juek"                    style="top: 698px; left: 735px; width: 163px; height: 401px; position: absolute;" id="pl_1507211" ii_id="ii_1092920">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092920.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0015.jpg" tfowner="juek" iiowner="juek"                    style="top: 748px; left: 785px; width: 163px; height: 401px; position: absolute;" id="pl_1507204" ii_id="ii_1092913">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092913.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0016.jpg" tfowner="juek" iiowner="juek"                    style="top: 798px; left: 835px; width: 163px; height: 401px; position: absolute;" id="pl_1507208" ii_id="ii_1092917">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092917.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0017.jpg" tfowner="juek" iiowner="juek"                    style="top: 848px; left: 885px; width: 163px; height: 401px; position: absolute;" id="pl_1507209" ii_id="ii_1092918">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092918.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0018.jpg" tfowner="juek" iiowner="juek"                    style="top: 898px; left: 935px; width: 163px; height: 401px; position: absolute;" id="pl_1507210" ii_id="ii_1092919">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092919.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0019.jpg" tfowner="juek" iiowner="juek"                    style="top: 948px; left: 985px; width: 163px; height: 401px; position: absolute;" id="pl_1507213" ii_id="ii_1092922">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092922.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0020.jpg" tfowner="juek" iiowner="juek"                    style="top: 998px; left: 1035px; width: 163px; height: 401px; position: absolute;" id="pl_1507212" ii_id="ii_1092921">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092921.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0021.jpg" tfowner="juek" iiowner="juek"                    style="top: 1048px; left: 1085px; width: 163px; height: 401px; position: absolute;" id="pl_1507216" ii_id="ii_1092925">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092925.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0022.jpg" tfowner="juek" iiowner="juek"                    style="top: 1098px; left: 1135px; width: 163px; height: 401px; position: absolute;" id="pl_1507214" ii_id="ii_1092923">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092923.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0023.jpg" tfowner="juek" iiowner="juek"                    style="top: 1148px; left: 1185px; width: 163px; height: 401px; position: absolute;" id="pl_1507219" ii_id="ii_1092929">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092929.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0024.jpg" tfowner="juek" iiowner="juek"                    style="top: 1198px; left: 1235px; width: 163px; height: 401px; position: absolute;" id="pl_1507218" ii_id="ii_1092927">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092927.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0025.jpg" tfowner="juek" iiowner="juek"                    style="top: 1248px; left: 1285px; width: 163px; height: 401px; position: absolute;" id="pl_1507215" ii_id="ii_1092924">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092924.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0026.jpg" tfowner="juek" iiowner="juek"                    style="top: 1298px; left: 1335px; width: 163px; height: 401px; position: absolute;" id="pl_1507217" ii_id="ii_1092926">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092926.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0027.jpg" tfowner="juek" iiowner="juek"                    style="top: 1348px; left: 1385px; width: 163px; height: 401px; position: absolute;" id="pl_1507220" ii_id="ii_1092928">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092928.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0028.jpg" tfowner="juek" iiowner="juek"                    style="top: 1398px; left: 1435px; width: 163px; height: 401px; position: absolute;" id="pl_1507223" ii_id="ii_1092932">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092932.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0029.jpg" tfowner="juek" iiowner="juek"                    style="top: 1448px; left: 1485px; width: 163px; height: 401px; position: absolute;" id="pl_1507222" ii_id="ii_1092931">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092931.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0030.jpg" tfowner="juek" iiowner="juek"                    style="top: 1498px; left: 1535px; width: 163px; height: 401px; position: absolute;" id="pl_1507221" ii_id="ii_1092930">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092930.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0031.jpg" tfowner="juek" iiowner="juek"                    style="top: 1548px; left: 1585px; width: 163px; height: 401px; position: absolute;" id="pl_1507224" ii_id="ii_1092933">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092933.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0032.jpg" tfowner="juek" iiowner="juek"                    style="top: 1598px; left: 1635px; width: 163px; height: 401px; position: absolute;" id="pl_1507225" ii_id="ii_1092934">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092934.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0033.jpg" tfowner="juek" iiowner="juek"                    style="top: 1648px; left: 1685px; width: 163px; height: 401px; position: absolute;" id="pl_1507228" ii_id="ii_1092936">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092936.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0034.jpg" tfowner="juek" iiowner="juek"                    style="top: 1698px; left: 1735px; width: 163px; height: 401px; position: absolute;" id="pl_1507229" ii_id="ii_1092938">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092938.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0035.jpg" tfowner="juek" iiowner="juek"                    style="top: 1748px; left: 1785px; width: 163px; height: 401px; position: absolute;" id="pl_1507227" ii_id="ii_1092937">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092937.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0036.jpg" tfowner="juek" iiowner="juek"                    style="top: 1798px; left: 1835px; width: 163px; height: 401px; position: absolute;" id="pl_1507230" ii_id="ii_1092939">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092939.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0037.jpg" tfowner="juek" iiowner="juek"                    style="top: 1848px; left: 1885px; width: 163px; height: 401px; position: absolute;" id="pl_1507226" ii_id="ii_1092935">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092935.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0038.jpg" tfowner="juek" iiowner="juek"                    style="top: 1898px; left: 1935px; width: 163px; height: 401px; position: absolute;" id="pl_1507233" ii_id="ii_1092942">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092942.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0039.jpg" tfowner="juek" iiowner="juek"                    style="top: 1948px; left: 1985px; width: 163px; height: 401px; position: absolute;" id="pl_1507231" ii_id="ii_1092940">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092940.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0040.jpg" tfowner="juek" iiowner="juek"                    style="top: 1998px; left: 2035px; width: 163px; height: 401px; position: absolute;" id="pl_1507232" ii_id="ii_1092941">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092941.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0041.jpg" tfowner="juek" iiowner="juek"                    style="top: 2048px; left: 2085px; width: 163px; height: 401px; position: absolute;" id="pl_1507234" ii_id="ii_1092943">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092943.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0042.jpg" tfowner="juek" iiowner="juek"                    style="top: 2098px; left: 2135px; width: 163px; height: 401px; position: absolute;" id="pl_1507235" ii_id="ii_1092944">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092944.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0043.jpg" tfowner="juek" iiowner="juek"                    style="top: 2148px; left: 2185px; width: 163px; height: 401px; position: absolute;" id="pl_1507237" ii_id="ii_1092946">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092946.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0044.jpg" tfowner="juek" iiowner="juek"                    style="top: 2198px; left: 2235px; width: 163px; height: 401px; position: absolute;" id="pl_1507236" ii_id="ii_1092945">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092945.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0045.jpg" tfowner="juek" iiowner="juek"                    style="top: 2248px; left: 2285px; width: 163px; height: 401px; position: absolute;" id="pl_1507238" ii_id="ii_1092947">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092947.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0046.jpg" tfowner="juek" iiowner="juek"                    style="top: 2298px; left: 2335px; width: 163px; height: 401px; position: absolute;" id="pl_1507240" ii_id="ii_1092949">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092949.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0047.jpg" tfowner="juek" iiowner="juek"                    style="top: 2348px; left: 2385px; width: 163px; height: 401px; position: absolute;" id="pl_1507242" ii_id="ii_1092951">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092951.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0048.jpg" tfowner="juek" iiowner="juek"                    style="top: 2398px; left: 2435px; width: 163px; height: 401px; position: absolute;" id="pl_1507239" ii_id="ii_1092948">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092948.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0049.jpg" tfowner="juek" iiowner="juek"                    style="top: 2448px; left: 2485px; width: 163px; height: 401px; position: absolute;" id="pl_1507241" ii_id="ii_1092950">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092950.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0050.jpg" tfowner="juek" iiowner="juek"                    style="top: 2498px; left: 2535px; width: 163px; height: 401px; position: absolute;" id="pl_1507243" ii_id="ii_1092953">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092953.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0051.jpg" tfowner="juek" iiowner="juek"                    style="top: 2548px; left: 2585px; width: 163px; height: 401px; position: absolute;" id="pl_1507244" ii_id="ii_1092952">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092952.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0052.jpg" tfowner="juek" iiowner="juek"                    style="top: 2598px; left: 2635px; width: 163px; height: 401px; position: absolute;" id="pl_1507246" ii_id="ii_1092955">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092955.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0053.jpg" tfowner="juek" iiowner="juek"                    style="top: 2648px; left: 2685px; width: 163px; height: 401px; position: absolute;" id="pl_1507245" ii_id="ii_1092954">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092954.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0054.jpg" tfowner="juek" iiowner="juek"                    style="top: 2698px; left: 2735px; width: 163px; height: 401px; position: absolute;" id="pl_1507247" ii_id="ii_1092956">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092956.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0055.jpg" tfowner="juek" iiowner="juek"                    style="top: 2748px; left: 2785px; width: 163px; height: 401px; position: absolute;" id="pl_1507248" ii_id="ii_1092957">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092957.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0056.jpg" tfowner="juek" iiowner="juek"                    style="top: 2798px; left: 2835px; width: 163px; height: 401px; position: absolute;" id="pl_1507251" ii_id="ii_1092959">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092959.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0057.jpg" tfowner="juek" iiowner="juek"                    style="top: 2848px; left: 2885px; width: 163px; height: 401px; position: absolute;" id="pl_1507249" ii_id="ii_1092958">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092958.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0058.jpg" tfowner="juek" iiowner="juek"                    style="top: 2898px; left: 2935px; width: 163px; height: 401px; position: absolute;" id="pl_1507250" ii_id="ii_1092960">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092960.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0059.jpg" tfowner="juek" iiowner="juek"                    style="top: 2948px; left: 2985px; width: 163px; height: 401px; position: absolute;" id="pl_1507254" ii_id="ii_1092963">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092963.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0060.jpg" tfowner="juek" iiowner="juek"                    style="top: 2998px; left: 3035px; width: 163px; height: 401px; position: absolute;" id="pl_1507253" ii_id="ii_1092962">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092962.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0061.jpg" tfowner="juek" iiowner="juek"                    style="top: 3048px; left: 3085px; width: 163px; height: 401px; position: absolute;" id="pl_1507252" ii_id="ii_1092961">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092961.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0062.jpg" tfowner="juek" iiowner="juek"                    style="top: 3098px; left: 3135px; width: 163px; height: 401px; position: absolute;" id="pl_1507255" ii_id="ii_1092964">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092964.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0063.jpg" tfowner="juek" iiowner="juek"                    style="top: 3148px; left: 3185px; width: 163px; height: 401px; position: absolute;" id="pl_1507256" ii_id="ii_1092965">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092965.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0064.jpg" tfowner="juek" iiowner="juek"                    style="top: 3198px; left: 3235px; width: 163px; height: 401px; position: absolute;" id="pl_1507257" ii_id="ii_1092966">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092966.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0065.jpg" tfowner="juek" iiowner="juek"                    style="top: 3248px; left: 3285px; width: 163px; height: 401px; position: absolute;" id="pl_1507259" ii_id="ii_1092968">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092968.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0066.jpg" tfowner="juek" iiowner="juek"                    style="top: 3298px; left: 3335px; width: 163px; height: 401px; position: absolute;" id="pl_1507258" ii_id="ii_1092967">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092967.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0067.jpg" tfowner="juek" iiowner="juek"                    style="top: 3348px; left: 3385px; width: 163px; height: 401px; position: absolute;" id="pl_1507264" ii_id="ii_1092974">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092974.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0068.jpg" tfowner="juek" iiowner="juek"                    style="top: 3398px; left: 3435px; width: 163px; height: 401px; position: absolute;" id="pl_1507262" ii_id="ii_1092971">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092971.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0069.jpg" tfowner="juek" iiowner="juek"                    style="top: 3448px; left: 3485px; width: 163px; height: 401px; position: absolute;" id="pl_1507260" ii_id="ii_1092969">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092969.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0070.jpg" tfowner="juek" iiowner="juek"                    style="top: 3498px; left: 3535px; width: 163px; height: 401px; position: absolute;" id="pl_1507261" ii_id="ii_1092970">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092970.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0071.jpg" tfowner="juek" iiowner="juek"                    style="top: 3548px; left: 3585px; width: 163px; height: 401px; position: absolute;" id="pl_1507263" ii_id="ii_1092972">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092972.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0072.jpg" tfowner="juek" iiowner="juek"                    style="top: 3598px; left: 3635px; width: 163px; height: 401px; position: absolute;" id="pl_1507265" ii_id="ii_1092973">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092973.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0073.jpg" tfowner="juek" iiowner="juek"                    style="top: 3648px; left: 3685px; width: 163px; height: 401px; position: absolute;" id="pl_1507266" ii_id="ii_1092975">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092975.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0074.jpg" tfowner="juek" iiowner="juek"                    style="top: 3698px; left: 3735px; width: 163px; height: 401px; position: absolute;" id="pl_1507267" ii_id="ii_1092976">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092976.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0075.jpg" tfowner="juek" iiowner="juek"                    style="top: 3748px; left: 3785px; width: 163px; height: 401px; position: absolute;" id="pl_1507268" ii_id="ii_1092977">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092977.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0076.jpg" tfowner="juek" iiowner="juek"                    style="top: 3798px; left: 3835px; width: 163px; height: 401px; position: absolute;" id="pl_1507269" ii_id="ii_1092978">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092978.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0077.jpg" tfowner="juek" iiowner="juek"                    style="top: 3848px; left: 3885px; width: 163px; height: 401px; position: absolute;" id="pl_1507271" ii_id="ii_1092980">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092980.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0078.jpg" tfowner="juek" iiowner="juek"                    style="top: 3898px; left: 3935px; width: 163px; height: 401px; position: absolute;" id="pl_1507270" ii_id="ii_1092979">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092979.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0079.jpg" tfowner="juek" iiowner="juek"                    style="top: 3948px; left: 3985px; width: 163px; height: 401px; position: absolute;" id="pl_1507272" ii_id="ii_1092981">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092981.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0080.jpg" tfowner="juek" iiowner="juek"                    style="top: 3998px; left: 4035px; width: 163px; height: 401px; position: absolute;" id="pl_1507273" ii_id="ii_1092982">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092982.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0081.jpg" tfowner="juek" iiowner="juek"                    style="top: 4048px; left: 4085px; width: 163px; height: 401px; position: absolute;" id="pl_1507274" ii_id="ii_1092983">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092983.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0082.jpg" tfowner="juek" iiowner="juek"                    style="top: 4098px; left: 4135px; width: 163px; height: 401px; position: absolute;" id="pl_1507275" ii_id="ii_1092984">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092984.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0083.jpg" tfowner="juek" iiowner="juek"                    style="top: 4148px; left: 4185px; width: 163px; height: 401px; position: absolute;" id="pl_1507276" ii_id="ii_1092985">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092985.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0084.jpg" tfowner="juek" iiowner="juek"                    style="top: 4198px; left: 4235px; width: 163px; height: 401px; position: absolute;" id="pl_1507294" ii_id="ii_1093003">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1093003.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0085.jpg" tfowner="juek" iiowner="juek"                    style="top: 4248px; left: 4285px; width: 163px; height: 401px; position: absolute;" id="pl_1507278" ii_id="ii_1092986">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092986.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0086.jpg" tfowner="juek" iiowner="juek"                    style="top: 4298px; left: 4335px; width: 163px; height: 401px; position: absolute;" id="pl_1507279" ii_id="ii_1092988">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092988.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0087.jpg" tfowner="juek" iiowner="juek"                    style="top: 4348px; left: 4385px; width: 163px; height: 401px; position: absolute;" id="pl_1507277" ii_id="ii_1092987">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092987.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0088.jpg" tfowner="juek" iiowner="juek"                    style="top: 4398px; left: 4435px; width: 163px; height: 401px; position: absolute;" id="pl_1507280" ii_id="ii_1092989">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092989.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0089.jpg" tfowner="juek" iiowner="juek"                    style="top: 4448px; left: 4485px; width: 163px; height: 401px; position: absolute;" id="pl_1507281" ii_id="ii_1092990">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092990.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0090.jpg" tfowner="juek" iiowner="juek"                    style="top: 4498px; left: 4535px; width: 163px; height: 401px; position: absolute;" id="pl_1507286" ii_id="ii_1092994">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092994.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0091.jpg" tfowner="juek" iiowner="juek"                    style="top: 4548px; left: 4585px; width: 163px; height: 401px; position: absolute;" id="pl_1507282" ii_id="ii_1092991">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092991.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0092.jpg" tfowner="juek" iiowner="juek"                    style="top: 4598px; left: 4635px; width: 163px; height: 401px; position: absolute;" id="pl_1507284" ii_id="ii_1092993">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092993.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0093.jpg" tfowner="juek" iiowner="juek"                    style="top: 4648px; left: 4685px; width: 163px; height: 401px; position: absolute;" id="pl_1507283" ii_id="ii_1092992">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092992.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0094.jpg" tfowner="juek" iiowner="juek"                    style="top: 4698px; left: 4735px; width: 163px; height: 401px; position: absolute;" id="pl_1507285" ii_id="ii_1092995">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092995.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0095.jpg" tfowner="juek" iiowner="juek"                    style="top: 4748px; left: 4785px; width: 163px; height: 401px; position: absolute;" id="pl_1507287" ii_id="ii_1092996">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092996.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0096.jpg" tfowner="juek" iiowner="juek"                    style="top: 4798px; left: 4835px; width: 163px; height: 401px; position: absolute;" id="pl_1507288" ii_id="ii_1092997">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092997.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0097.jpg" tfowner="juek" iiowner="juek"                    style="top: 4848px; left: 4885px; width: 163px; height: 401px; position: absolute;" id="pl_1507290" ii_id="ii_1093000">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1093000.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0098.jpg" tfowner="juek" iiowner="juek"                    style="top: 4898px; left: 4935px; width: 163px; height: 401px; position: absolute;" id="pl_1507292" ii_id="ii_1093001">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1093001.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0099.jpg" tfowner="juek" iiowner="juek"                    style="top: 4948px; left: 4985px; width: 163px; height: 401px; position: absolute;" id="pl_1507291" ii_id="ii_1092998">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092998.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0100.jpg" tfowner="juek" iiowner="juek"                    style="top: 4998px; left: 5035px; width: 163px; height: 401px; position: absolute;" id="pl_1507289" ii_id="ii_1092999">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1092999.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="IBE_039_01_0101.jpg" tfowner="juek" iiowner="juek"                    style="top: 5048px; left: 5085px; width: 163px; height: 401px; position: absolute;" id="pl_1507293" ii_id="ii_1093002">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1093002.jpg">   </div>      </div>  <div class="tetitem_text"></div>  </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="TETbox" itemtitle="" tfowner="juek" iiowner="juek"                 tetaction="js: $tet(&quot;detail&quot;).css(&quot;z-index&quot;,  10);"  rotAngle="rotate(4deg)" style="top: 537px; left: 451px; width: 287px; height: 41px; position: absolute;transform:rotate(4deg);-moz-transform:rotate(4deg);-webkit-transform:rotate(4deg);-ms-transform:rotate(4deg);" id="pl_1507503" ii_id="ii_1093233">   <div class="tetitem_inner tetfolio_item-inner"   >         <div class="tetitem_text"></div>  </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="skala" tfowner="juek" iiowner="juek"                tetlabel="detail"    style="top: 588px; left: 9px; width: 700px; height: 90px; position: absolute;" id="pl_1507771" ii_id="ii_1093466">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1093466.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="TETbox" itemtitle="schiene_detail" tfowner="juek" iiowner="juek"                tetlabel="detail"    style="top: 588px; left: 9px; width: 700px; height: 88px; position: absolute;" id="pl_1507300" ii_id="ii_1093010">   <div class="tetitem_inner tetfolio_item-inner"   >          <div class="tetitem tetfolio_item  imgInsert"  itemtype="tettool" itemtitle="Diashow Schiebe-Controller" tfowner="juek" iiowner="shaase"   tettool_param_diashow_name=serie tettool_param_x-Richtung=-500         freedrag=1    tetlabel="hzSerie"    style="top: 0px; left: 500px; width: 200px; height: 88px; position: absolute;" id="pl_1507301" ii_id="ii_685823">   <div class="tetitem_inner tetfolio_item-inner"   >      <script src="../static/tetfolio/tools/dia_drag_ctrl.js"></script>
+<script type="sebscript">$('#pl_1507301').on("tet:beforeinit", function() { tettool_dia_drag_ctrl.init("dia_drag_ctrl", $('#pl_1507301')) })</script>
+<style type="text/css">
+#pl_1507301:not([layouting]):not(.ui-draggable-disabled) *:not(input):not(.ui-slider-handle) {
+	cursor: pointer;
+}
+</style>  </div>      </div>  <div class="tetitem_text"></div>  </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="m_aus" tfowner="juek" iiowner="juek"                tetlabel="m_an"    style="top: 329px; left: 912px; width: 58px; height: 56px; position: absolute;" id="pl_1507469" ii_id="ii_1093196">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1093196.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="TETbox" itemtitle="" tfowner="juek" iiowner="juek"                 tetaction="js: multiOnOff();"   style="top: 310px; left: 901px; width: 86px; height: 90px; position: absolute;" id="pl_1507470" ii_id="ii_1093197">   <div class="tetitem_inner tetfolio_item-inner"   >         <div class="tetitem_text"></div>  </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="e_aus" tfowner="juek" iiowner="juek"                    style="top: 463px; left: 780px; width: 32px; height: 94px; position: absolute;" id="pl_1507493" ii_id="ii_1093221">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1093221.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="TETbox" itemtitle="" tfowner="juek" iiowner="juek"                 tetaction="js: eOnOff();"   style="top: 456px; left: 767px; width: 60px; height: 56px; position: absolute;" id="pl_1507476" ii_id="ii_1093202">   <div class="tetitem_inner tetfolio_item-inner"   >         <div class="tetitem_text"></div>  </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="s_aus" tfowner="juek" iiowner="juek"                    style="top: 357px; left: 212px; width: 23px; height: 76px; position: absolute;" id="pl_1507494" ii_id="ii_1093222">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1093222.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="TETbox" itemtitle="" tfowner="juek" iiowner="juek"                 tetaction="js: sOnOff();"   style="top: 345px; left: 197px; width: 53px; height: 54px; position: absolute;" id="pl_1507489" ii_id="ii_1093216">   <div class="tetitem_inner tetfolio_item-inner"   >         <div class="tetitem_text"></div>  </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="detail" tfowner="juek" iiowner="juek"                 tetaction="js: $tet(&quot;detail&quot;).css(&quot;z-index&quot;,  -1);"   style="top: 596px; left: 16px; width: 30px; height: 30px; position: absolute;" id="pl_1507508" ii_id="ii_1093240">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1093240.png">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="tettool" itemtitle="Diashow Schiebe-Controller" tfowner="juek" iiowner="shaase"   tettool_param_x-Richtung=-72 tettool_param_y-Richtung=-3 tettool_param_diashow_name=serie         freedrag=1        style="top: 482px; left: 687px; width: 50px; height: 109px; position: absolute;" id="pl_1507296" ii_id="ii_685823">   <div class="tetitem_inner tetfolio_item-inner"   >      <script src="../static/tetfolio/tools/dia_drag_ctrl.js"></script>
+<script type="sebscript">$('#pl_1507296').on("tet:beforeinit", function() { tettool_dia_drag_ctrl.init("dia_drag_ctrl", $('#pl_1507296')) })</script>
+<style type="text/css">
+#pl_1507296:not([layouting]):not(.ui-draggable-disabled) *:not(input):not(.ui-slider-handle) {
+	cursor: pointer;
+}
+</style>  </div>      </div>  <div class="tetitem_text"></div>  </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="Pfeil_re" tfowner="juek" iiowner="juek"                tetlabel="detail" tetaction="dia: serie -1"   style="top: 596px; left: 122px; width: 30px; height: 30px; position: absolute;" id="pl_1513590" ii_id="ii_1097953">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1097953.png">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="pfeil_li" tfowner="juek" iiowner="juek"                tetlabel="detail" tetaction="dia: serie +1"   style="top: 596px; left: 70px; width: 30px; height: 30px; position: absolute;" id="pl_1513591" ii_id="ii_1097954">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1097954.png">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="TETbox" itemtitle="displayBox" tfowner="benedib96@fu" iiowner="benedib96@fu"                    style="top: 97px; left: 675px; width: 350px; height: 232px; position: absolute;overflow:hidden;" id="pl_1507546" ii_id="ii_1093283">   <div class="tetitem_inner tetfolio_item-inner"    style="margin-top: -0px;margin-left: -0px; width: calc(83.3333% + 0px); height: calc(83.3333% + 0px); -transform: scale(1.2000); -moz-transform: scale(1.2000); -moz-transform-origin: 0 0; -ms-transform: scale(1.2000); -ms-transform-origin: 0 0; -webkit-transform: scale(1.2000) translate3d(0,0,0); -webkit-transform-origin: 0 0;">           <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="multimeter_display" tfowner="benedib96@fu" iiowner="juek"                    style="top: 10px; left: 0px; width: 288px; height: 177px; position: absolute;" id="pl_1507549" ii_id="ii_1056541">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1056541.jpg">   </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="TETdraw" itemtitle="zeiger1" tfowner="benedib96@fu" iiowner="benedib96@fu"                    style="top: 78px; left: 3px; width: 282px; height: 105px; position: absolute;overflow:hidden;" id="pl_1507550" ii_id="ii_1093286">   <div class="tetitem_inner tetfolio_item-inner"    style="margin-top: -0px;margin-left: -0px; width: calc(434.7826% + 0px); height: calc(434.7826% + 0px); -transform: scale(0.2300); -moz-transform: scale(0.2300); -moz-transform-origin: 0 0; -ms-transform: scale(0.2300); -ms-transform-origin: 0 0; -webkit-transform: scale(0.2300) translate3d(0,0,0); -webkit-transform-origin: 0 0;">    <svg width="240" height="97" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>Layer 1</title>
+  <path stroke="#000000" fill="#000000" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0.7" opacity="0.7" id="svg_pl_1228629_1" d="m9.09499,923.41668c0.0198,-20.91541 0.20318,-654.54207 0.23382,-667.97027c0.0307,-13.4282 0.19796,-118.81527 -0.35546,-149.8513c4.24613,-8.53287 6.93461,-13.77776 10.22348,-19.41488c0.93952,-28.97633 1.27534,-57.87664 2.0612,-53.64812c1.81571,-4.05504 0.15616,24.97884 1.28496,53.2613c4.01376,6.59231 7.6831,11.11805 12.0413,19.77694c0,0 0.0999,21.08911 0.80997,149.68493c0.71002,128.59581 -2.06084,642.32472 -1.84674,667.97689c-10.03596,0.10308 -14.08028,0.77629 -24.45253,0.18451z"/>
+  <line fill="none" stroke="#000000" stroke-width="5" stroke-opacity="0.7" fill-opacity="0.7" opacity="0.7" x1="21" y1="100" x2="21" y2="850" id="svg_pl_1228629_2"/>
+ </g>
+</svg>  </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="TETbox" itemtitle="hzDiplaySmall" tfowner="benedib96@fu" iiowner="benedib96@fu"                    style="top: 16px; left: 0px; width: 356px; height: 215px; position: absolute;" id="pl_1507551" ii_id="ii_1093287">   <div class="tetitem_inner tetfolio_item-inner"   >         <div class="tetitem_text"></div>  </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="img" itemtitle="close2.png" tfowner="benedib96@fu" iiowner="juek"                 tetaction="js: $tet(&quot;displayBox&quot;).css(&quot;z-index&quot;,  -1)"   style="top: 25px; left: 255px; width: 25px; height: 25px; position: absolute;" id="pl_1507552" ii_id="ii_1057426">   <div class="tetitem_inner tetfolio_item-inner"   >    <img class='tetitem_img ' draggable="false" src="../IMPAL/1057426.png">   </div>      </div>  <div class="tetitem_text"></div>  </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="TETbox" itemtitle="displayBoxMini" tfowner="benedib96@fu" iiowner="benedib96@fu"                    style="top: 210px; left: 813px; width: 172px; height: 106px; position: absolute;overflow:hidden;" id="pl_1507544" ii_id="ii_1093281">   <div class="tetitem_inner tetfolio_item-inner"    style="margin-top: -0px;margin-left: -0px; width: calc(169.4915% + 0px); height: calc(169.4915% + 0px); -transform: scale(0.5900); -moz-transform: scale(0.5900); -moz-transform-origin: 0 0; -ms-transform: scale(0.5900); -ms-transform-origin: 0 0; -webkit-transform: scale(0.5900) translate3d(0,0,0); -webkit-transform-origin: 0 0;">           <div class="tetitem tetfolio_item  "  itemtype="TETdraw" itemtitle="zeiger2" tfowner="benedib96@fu" iiowner="benedib96@fu"                    style="top: 67px; left: 3px; width: 282px; height: 105px; position: absolute;overflow:hidden;" id="pl_1507545" ii_id="ii_1093282">   <div class="tetitem_inner tetfolio_item-inner"    style="margin-top: -0px;margin-left: -0px; width: calc(434.7826% + 0px); height: calc(434.7826% + 0px); -transform: scale(0.2300); -moz-transform: scale(0.2300); -moz-transform-origin: 0 0; -ms-transform: scale(0.2300); -ms-transform-origin: 0 0; -webkit-transform: scale(0.2300) translate3d(0,0,0); -webkit-transform-origin: 0 0;">    <svg width="240" height="97" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>Layer 1</title>
+  <path stroke="#000000" fill="#000000" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0.7" opacity="0.7" id="svg_pl_1228629_1" d="m9.09499,923.41668c0.0198,-20.91541 0.20318,-654.54207 0.23382,-667.97027c0.0307,-13.4282 0.19796,-118.81527 -0.35546,-149.8513c4.24613,-8.53287 6.93461,-13.77776 10.22348,-19.41488c0.93952,-28.97633 1.27534,-57.87664 2.0612,-53.64812c1.81571,-4.05504 0.15616,24.97884 1.28496,53.2613c4.01376,6.59231 7.6831,11.11805 12.0413,19.77694c0,0 0.0999,21.08911 0.80997,149.68493c0.71002,128.59581 -2.06084,642.32472 -1.84674,667.97689c-10.03596,0.10308 -14.08028,0.77629 -24.45253,0.18451z"/>
+  <line fill="none" stroke="#000000" stroke-width="5" stroke-opacity="0.7" fill-opacity="0.7" opacity="0.7" x1="21" y1="100" x2="21" y2="850" id="svg_pl_1228629_2"/>
+ </g>
+</svg>  </div>      </div>  <div class="tetitem_text"></div>  </div>      </div>   <div class="tetitem tetfolio_item  codeBox"  itemtype="TETbox" itemtitle="mainscript" tfowner="benedib96@fu" iiowner="benedib96@fu"                    style="top: 6px; left: 0px; width: 72px; height: 200px; position: absolute;" id="pl_1507547" ii_id="ii_1093284">   <div class="tetitem_inner tetfolio_item-inner"   >         <div class="tetitem_text"><style>
+    .tetitem[itemtitle^=zeiger][layouting] svg {
+        transform-origin: none  !important;
+        transform: none  !important;
+    }
+    .tetitem[itemtitle^=zeiger]:not([layouting]) svg {
+//        transition: 1s transform;
+        transform-origin: 10px 700px;
+    }
+    
+   
+</style><script type="sebscript"> (function() {
+    "use strict";
+   console.log("mainscript");
+    
+    var $tetitem = $('#pl_1507547');
+    var ldPanel  = $tetitem.closest(".tetitem")[0];
+    var timer ;
+    
+    window.ldPanel = ldPanel;
+    
+    /*
+    filter: saturate(1.7) hue-rotate(15deg) blur(0px) brightness(1.1) contrast(0.9) sepia(0.5) invert(0); }
+    */
+    
+    
+    var $knopf = $tet("knopf", ldPanel);         // Drehknopf
+    
+    var I_Scale =  10 / 130; //tweek  data to max at I= 10 nA
+    ldPanel.scanSpeed_ms = 200;
+    ldPanel.scanSpeed_dU = .1;
+    ldPanel.I_noise = .01 /5;
+    
+    //////////////////////////////
+    // zustands-variablen
+    ldPanel.faktor = 1; 
+    ldPanel.antiNoiseFactor = 500;
+
+    
+    ldPanel.ztraege1 = 10000; // initial delta-degree per sec.  zeiger1
+    ldPanel.ztraege2 = 0;
+    ldPanel.ztraege2f = "";
+    
+    ldPanel.zahl_unten_n;//  = 0;
+    ldPanel.zahl_unten_val;//= 0;    
+    ldPanel.knopf_speed   = .01;
+    ldPanel.knopf_step    = .1;
+//    ldPanel.zahl_unten_vals = {/* knopfmode: [] *                /}
+    ldPanel.zahl_unten_max = 9999;
+    ldPanel.zahl_unten_nDecimals = 0;
+    ldPanel.knopf_angle = undefined;
+    
+    ldPanel.u1 = 2.58
+    ldPanel.u3 = 1.95
+    
+    var zeiger1svg = $("svg", $tet("zeiger1"))[0];
+    var zeiger2svg = $("svg", $tet("zeiger2"))[0];
+    var empfPos = 0, sendPos = 0;
+    var multiOff = true, eOff = true, sOff = true, e90 = false;
+    var currVal = 1;
+    ldPanel.zeiger2svg = zeiger2svg;
+    ldPanel.zeiger1svg = zeiger1svg;
+    
+    
+    
+    // Herzstück: 
+    window.calc = function(arg, dia) {
+        var a = Math.floor(dia);
+        if (arg == "serie")  empfPos = a;
+        //else if ( arg == "s_s" ) sendPos = a;
+        //else if ( arg == "k" ) ldPanel.faktor = a/8;
+        
+        tetshow("pfeil_li");        
+        tetshow("Pfeil_re");
+        
+        if (empfPos == 0) {
+            tethide("Pfeil_re");    //Pfeiltaste ausblenden bei bestimmter Position
+           
+        } else if (empfPos == 100 ){
+             tethide ("pfeil_li")
+        }
+        
+        var v = vals[empfPos];     
+       
+       
+    
+        valSchwankung (v * ldPanel.faktor);
+    
+    }
+    
+    var lastVal = 0;
+    function valSchwankung (v) {
+        if (multiOff) v = -0.05; 
+        else if (sOff || eOff) v = 0;
+        if (!isNaN(v)) {
+            if (v == lastVal)   return;             //antiZeigerZuckungen ;-)  
+            currVal = v;
+        } else v =currVal;
+        lastVal = v;
+        
+        if (v > 0.1) {
+            v *= ldPanel.antiNoiseFactor;
+    		
+    		
+    		// v = drawNormal(v,1,12); //Rauscheinstellungen hier nicht notwendig
+    		
+    		v /= ldPanel.antiNoiseFactor;
+        }
+		
+        z1_val(v);
+       
+
+    }
+    
+    window.z1_angle = function z1_angle(deg) {
+        if(!zeiger1svg && !zeiger2svg) return;
+        var a = get_css_transform(zeiger2svg).angle;            //zeiger 2 weil der ist immer sichtbar
+        var t = Math.abs(deg-a) / ldPanel.ztraege1 +  ldPanel.ztraege2 ; // ... delta-degree per sec.
+        zeiger1svg.style.transition="transform "+t+"s";
+        zeiger1svg.style.transform="translate(600px, 0px) rotate("+deg+"deg)";
+        zeiger2svg.style.transition="transform "+t+"s";
+        zeiger2svg.style.transform="translate(600px, 0px) rotate("+deg+"deg)";
+    }
+    window.z1_val = function z1_val(v) {// 4.25 entspricht 1 - 0 ist 0
+       // console.log("z1_val",v);
+        if (isNaN(v)) v = currVal;
+        var deg0 = -42.7;
+        var deg  = deg0 + v*(32.4-deg0)*1.065; // v*(33.1-deg0)/3;
+        z1_angle( deg );
+       
+    }
+    
+    /*window.empfaengerDrehen = function empfaengerDrehen() {
+        e90 = !e90;
+        tettoggle("90")
+        calc();
+    }*/
+    
+    
+    window.multiOnOff = function multiOnOff() {
+        multiOff = !multiOff;
+        tettoggle("m_an")
+        calc();
+    }
+    
+    window.sOnOff = function sOnOff() {
+        sOff = !sOff;
+        tettoggle("s_aus")
+        calc();
+    }
+    window.eOnOff = function eOnOff() {
+        eOff = !eOff;
+        tettoggle("e_aus")
+        calc();
+    }
+    
+
+    //zufallszahlen normalverteilt
+    function drawNormal(mu, sigma, nsamples){
+        if(!nsamples) nsamples = 6
+        if(!sigma) sigma = 1
+        if(!mu) mu=0
+    
+        var run_total = 0
+        for(var i=0 ; i<nsamples ; i++){
+           run_total += Math.random()
+        }
+    
+        return sigma*Math.sqrt(2)*(run_total - nsamples/2) + mu
+    }
+    
+    
+   
+    
+
+
+    $tetitem.on("tet:beforedynvar", function() {                //Anfangsposition der Diashow
+        dia_show("knopf", 9);
+        
+	    valSchwankung ();
+	    multiOnOff();       //initial an
+        ldPanel.ztraege1 = 30;
+        ldPanel.ztraege2 = 1;
+    });
+
+var vals = [ [0],[0.040],[0.148],[0.250],[0.290],[0.369],[0.480],[0.429],
+[0.321],[0.263],[0.211],[0.168],[0.059],[0.031],[0.009],[0.002],[0.000],[0.068],
+[0.230],[0.450],[0.580],[0.673],[0.721],[0.671],[0.498],[0.350],[0.160],[0.075],
+[0.011],[0],[0.001],[0.031],[0.120],[0.260],[0.440],[0.657],[0.785],[0.829],[0.788],
+[0.645],[0.460],[0.312],[0.135],[0.032],[0.001],[0],[0.021],[0.092],[0.237],[0.372],
+[0.528],[0.680],[0.770],[0.790],[0.705],[0.542],[0.399],[0.155],[0.043],[0.010],[0],
+[0.010],[0.076],[0.212],[0.300],[0.506],[0.623],[0.742],[0.820],[0.750],[0.612],[0.490],
+[0.210],[0.140],[0.020],[0.001],[0.015],[0.057],[0.165],[0.240],[0.470],[0.564],[0.675],
+[0.782],[0.852],[0.646],[0.479],[0.350],[0.190],[0.062],[0.002],[0.003],[0.041],[0.140],
+[0.220],[0.399],[0.500],[0.705],[0.730],[0.735],[0.758] ];
+
+})()
+
+</script></div>  </div>      </div>   <div class="tetitem tetfolio_item  logicControllerBox"  itemtype="TETbox" itemtitle="Logic-Box" tfowner="benedib96@fu" iiowner="benedib96@fu"                    style="top: 206px; left: 0px; width: 71px; height: 200px; position: absolute;" id="pl_1507548" ii_id="ii_1093285">   <div class="tetitem_inner tetfolio_item-inner"   >         <div class="tetitem_text"><script type="text/logic">
+action === "loadpage" →
+    tethide("m_an")
+    tetshow("s_aus")
+    tetshow("e_aus")
+   // tethide("displayBox")
+    $tet("detail").css("z-index",  -1)
+    $tet("displayBox").css("z-index" , -1) //damit Zeiger immer synchron laufen
+
+action === "diashow" && obj==="serie" →
+   console.log(action, arg, obj)
+
+    calc("serie", arg)
+
+</script></div>  </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="TETbox" itemtitle="hzDisplayBig" tfowner="benedib96@fu" iiowner="benedib96@fu"                 tetaction="js: $tet(&quot;displayBox&quot;).css(&quot;z-index&quot;,  10)"   style="top: 210px; left: 800px; width: 187px; height: 106px; position: absolute;" id="pl_1507543" ii_id="ii_1093280">   <div class="tetitem_inner tetfolio_item-inner"   >         <div class="tetitem_text"></div>  </div>      </div>   <div class="tetitem tetfolio_item  "  itemtype="TETbox" itemtitle="" tfowner="juek" iiowner="juek"                    style="top: 683px; left: 0px; width: 1025px; height: 60px; position: absolute;" id="pl_1545457" ii_id="ii_1123009">   <div class="tetitem_inner tetfolio_item-inner"   >         <div class="tetitem_text"><span style="font-size:14px;"><span style="color:#2c5682;"><br></span></span><span style="font-size: 14px;"><span style="color: rgb(44, 86, 130);">© 2021 Freie Universität Berlin |&nbsp;</span></span><span style="caret-color: rgb(44, 86, 130); color: rgb(44, 86, 130); font-size: 14px;">AG Didaktik der Physik&nbsp;</span><span style="font-size: 14px;"><span style="color: rgb(44, 86, 130);">in Zusammenarbeit mit QUA-LiS NRW</span></span><span style="font-size:14px;"><span style="color:#2c5682;"><br></span></span></div>  </div>      </div>     <script>var TETdata_page = undefined;</script>    
+<style type="text/css" itemtype="TETstyle" itemtitle="meinStyleSheet" iiowner="jsiems@fu" ii_id="ii_1009966">
+.imgInsert {
+  background: url('../IMPAL/1071825');  
+}
+
+</style>  
+<style type="text/css" itemtype="TETstyle" itemtitle="dynvar" iiowner="shaase" ii_id="ii_82661">
+/* non-master TETstyle */
+.dragme {
+	border: solid 1px grey;
+	border-radius: 30px;
+}
+.dropziel {
+   outline: dotted 1px red;
+   content: "Ziel";
+}
+.gray_border {
+   outline: 1px #ddd solid;
+}
+.back {
+   background: firebrick;
+}
+#mainPane .codeBox:not([layouting][can_edit_tet]) {
+	pointer-events: none;
+}
+#mainPane .codeBox:not([layouting][can_edit_tet]) .tetitem,
+#mainPane .codeBox:not([layouting][can_edit_tet]) button,
+#mainPane .codeBox:not([layouting][can_edit_tet]) input,
+#mainPane .codeBox:not([layouting][can_edit_tet]) textarea,
+#mainPane .codeBox:not([layouting][can_edit_tet])[tetaction],
+#mainPane .codeBox:not([layouting][can_edit_tet])[tetbox_dia]/*Safari wants this!!!!*/ {
+	pointer-events: initial;
+}
+#mainPane[can_edit_ii] .codeBox[layouting][can_edit_tet] { /* don't ! [can_edit_ii]   20170922 but[can_edit_tet] to hide nested in tet.tool */
+	font-size:8px;
+x	outline: 4px orange dotted;
+	background: rgba(127,255,0,.2);
+}
+#mainPane[can_edit_ii] .codeBox[layouting][itemtype=tettool]:not(.tet_underlay):before {
+    content: "tet.tool: " attr(itemtitle);
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 800;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 1px;
+    width: calc(100% - 11px);
+    border: 2px solid green;
+    margin: 3px;
+    background: #f5f5dcbb;
+    z-index: 1;
+}
+#mainPane[can_edit_ii] .codeBox[layouting]:not(.tet_underlay):not([itemtype=tettool]):before {
+    content: attr(itemtitle);
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 800;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 1px;
+    width: calc(100% - 11px);
+    border: 2px solid green;
+    margin: 3px;
+    background: #f5f5dcbb;
+    z-index: 1;
+}
+
+.img-crisp-edges {
+image-rendering: -moz-crisp-edges;         /* Firefox */
+image-rendering:   -o-crisp-edges;         /* Opera */
+image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+image-rendering: crisp-edges;
+-ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+}
+
+.hide_nonLayouting {}
+
+.codeBox[layouting][can_edit_ii] script {
+  display: block;
+x  word-wrap: break-word;
+white-space: pre-wrap;
+  /* padding: 7px; */
+  /* word-break: normal; */
+  outline: grey 1px solid;
+  margin: 12px 5px 7px;
+}
+
+.codeBox[layouting][can_edit_ii]:not(.tet_underlay) script:before {
+	content: "\003cscript\003e";
+	font-size: 10px;
+	font-style: italic;
+	font-weight: 800;
+	text-align: center;
+	display: block;
+	position: absolute;
+    top: 1px;
+    width: 100%;
+}
+.codeBox[itemtype=tettool][layouting][can_edit_ii] script:before {
+    top: 15px;
+}
+.codeBox[itemtype=tettool][layouting][can_edit_ii] script {
+    margin: 28px 5px 7px;
+}
+
+
+.codeBox[layouting][can_edit_ii] style {
+  display: block;
+x  word-wrap: break-word;
+white-space: pre-wrap;
+  /* padding: 7px; */
+  /* word-break: normal; */
+  outline: grey 1px solid;
+  margin: 12px 5px 7px;
+}
+
+.codeBox[layouting][can_edit_ii]:not(.tet_underlay) style:before {
+	content: "\003cstyle\003e";
+	font-size: 10px;
+	font-style: italic;
+	font-weight: 800;
+	text-align: center;
+	display: block;
+	position: absolute;
+    top: 1px;
+    width: 100%;
+}
+.codeBox[itemtype=tettool][layouting][can_edit_ii] style:before {
+    top: 15px;
+}
+.codeBox[itemtype=tettool][layouting][can_edit_ii] style {
+    margin: 28px 5px 7px;
+}
+
+
+.whiteBox {
+	background: white;
+}
+.overflow.tetitem>.tetitem_inner {
+    overflow:visible;
+}
+.padding10>.tetitem_inner>.tetitem_text {
+    padding: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+}
+.padding20>.tetitem_inner>.tetitem_text {
+    padding: 20px;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+}
+
+
+.opacity_02{
+	opacity: .02;
+}
+.opacity_05 {
+	opacity: .05;
+}
+.opacity_10 {
+	opacity: .1;
+}
+.opacity_20 {
+	opacity: .2;
+}
+.opacity_40 {
+	opacity: .4;
+}
+.opacity_60 {
+	opacity: .6;
+}
+
+
+.relative_position {
+	position: relative !important;
+}
+.user-select-text, .user-select-text * {
+   -ms-user-select: text;
+   -khtml-user-select: initial;
+   -webkit-user-select: initial;
+   user-select: text;
+   -moz-user-select: text;    
+}
+.text_pre {
+    display: block;
+    unicode-bidi: embed;
+    font-family: monospace;
+    white-space: pre;
+}
+.z-index_1000 {
+    z-index:1000;
+}
+
+.textarea_fullsize>.tetitem_inner>.tetitem_text textarea {
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;    
+}
+.textarea_fullwidth>.tetitem_inner>.tetitem_text textarea {
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    margin: 0;
+    padding: 0;
+}
+</style>  
+<style type="text/css" itemtype="TETstyle" itemtitle="Logic-Controller-Box" iiowner="shaase" ii_id="ii_793428">
+.logicControllerBox .errorMsg:not(:empty) {
+    background: rgb(255, 134, 60);
+    position: relative;
+    padding: 5px;
+    /*width: 100%;*/
+    font-size: 12px;
+}
+.logicControllerBox .errorMsg span {
+    display: list-item;
+    list-style: decimal;
+    margin-left: 1.2em;
+}
+
+.logicControllerBox>.tetitem_inner>.tetitem_text {
+    position: relative;
+}
+.logicControllerBox>.tetitem_inner {
+    display: flex;
+    flex-direction: column;
+}
+.logicControllerBox:not([layouting])>.tetitem_inner>.tetitem_text,
+.logicControllerBox:not([layouting])::before {
+    display: none;
+	pointer-events: none;
+}
+
+.logicControllerBox>.tetitem_inner>.tetitem_text {
+    overflow: auto;
+    background: rgba(127,255,0,.1);
+    outline: 1px solid rgba(127,255,0,.3);
+    font-family:Courier New,Courier,monospace;
+}
+.logicControllerBox>.tetitem_inner>.tetitem_text script {
+    display: block;
+	font-size: 11px;
+    white-space: pre;
+}
+.logicControllerBox>.tetitem_inner>.tetitem_text script:first-line {
+    line-height: 0;
+}
+.logicControllerBox::before {
+    content: "Logic-Controller-Box";
+    font-family: monospace;
+    position: absolute;
+    left: 0;
+    top: -1.2em;
+    color: rgba(62, 125, 0, 0.9);
+    font-size: 14px;
+    color: rgba(62, 125, 0, 0.9);
+}
+
+.logicController_demo_showAlways.logicControllerBox:not([layouting])>.tetitem_inner>.tetitem_text,
+.logicController_demo_showAlways.logicControllerBox:not([layouting])>.tetitem_inner>.tetitem_text script,
+.logicController_demo_showAlways.logicControllerBox:not([layouting])::before {
+    display: block;
+	pointer-events: all;
+}
+
+
+</style>
+<script src="../static/tetfolio/tools/logicController.js"></script>
+<script type="sebscript">(function() {
+    console.log("Logic-Controller-Box")
+    var mp= $("#mainPane")
+    $(".logicControllerBox", mp).on("tet:beforeinit", function() { 
+        var lcb = $(this);
+        var lcbText = $(".tetitem_text", lcb);
+        var lcbScr  = lcbText.find("script[type*=logi]");
+        if(lcbScr.length)  lcbText = lcbScr;
+
+        //lcb.attr("tettool_param_Rules", lcbText.text());
+        lcb.data("rules", lcbText.text());
+        $(".tetitem_text", lcb).before("<div class='errorMsg'></div>");
+        tettool_logicController.init("LogicControllerBox", lcb);
+    });
+})()
+</script><style>
+</style>  </div>    <script>if(location.protocol==='file:') { $('iframe').each(function(){if(this.src.match(/file:\/\/.*?\/web\/\d+.html($|[?])/)) this.src+='?nonavi'});
+if(location.search.match(/[?&]nonavi([^=]|$)/)) $('.header_navigation').remove() }</script>  </body> </html>
