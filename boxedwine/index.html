@@ -6,7 +6,8 @@
     <meta name="description" content="boxedwine emulator">
     <meta name="keywords" content="emulator,wine,windows,x86,PC,emscripten,web assembly,wasm,boxedwine">
     <meta name="author" content="James Bryant, Kevin O'Dwyer">
-      <link rel="stylesheet" type="text/css" href="boxedwine.css">
+    <link rel="stylesheet" type="text/css" href="boxedwine.css">
+    <script src="enable-threads.js"></script>
   </head>
   <body>
   <div id="loading">
@@ -19,7 +20,7 @@
       </div>
   </div>
     <div>
-        <div class="emscripten">
+        <div class="emscripten" style="display: none">
             <button id="startbtn" style="display: none" onclick="start()">Start</button>
             <button id="uploadbtn" style="display: none" onclick="document.getElementById('upload').click()" >Add File(s)</button>
             <input style="display: none" id="upload" name="upload" onclick="document.getElementById('uploadbtn').click();" onchange="startWithFiles(event.target.files);"  type="file" multiple />
@@ -31,7 +32,7 @@
               <input type="checkbox" id="soundToggle" onclick="toggleSound();" />Enable Sound
           </span>
           <input type="checkbox" id="pointerLock" checked>Lock/hide mouse pointer
-          <input type="checkbox" id="showConsole" onclick="toggleConsole();" checked>Show console
+          <input type="checkbox" id="showConsole" onclick="toggleConsole();">Show console
           &nbsp;&nbsp;&nbsp;
           <input type="checkbox" id="resize">Resize canvas
           <input type="button" value="Fullscreen" onclick="Module.requestFullscreen(document.getElementById('pointerLock').checked, document.getElementById('resize').checked)">
@@ -69,7 +70,27 @@
         </div>
         <hr>
     </div>
-        <script src="boxedwine-shell.js"></script>
-<script async type="text/javascript" src="boxedwine.js"></script>
+    <script src="boxedwine-shell.js"></script>
+    <script async type="text/javascript" src="boxedwine.js"></script>
+    <script>
+        (function () {
+            const canvas = document.getElementById('canvas');
+            function fit() {
+                if (document.fullscreenElement)
+                    return;
+                const cw = canvas.width, ch = canvas.height;
+                if (!cw || !ch)
+                    return;
+                const top = canvas.getBoundingClientRect().top + window.scrollY;
+                const availW = document.documentElement.clientWidth - 4;
+                const availH = window.innerHeight - top - 8;
+                const scale = Math.min(availW / cw, availH / ch);
+                canvas.style.width  = (cw * scale) + 'px';
+                canvas.style.height = (ch * scale - 15) + 'px';
+            }
+            window.addEventListener('resize', fit);
+            setInterval(fit, 300);
+        })();
+</script>
   </body>
 </html>
