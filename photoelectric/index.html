@@ -8,12 +8,23 @@
 <body>
   <script type="module">
     var body = document.body, html = document.documentElement;
-    const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight) - 20;
-    const width = Math.max(body.scrollWidth, body.offsetWidth, html.clientWidth, html.scrollWidth, html.offsetWidth) - 10;
+    const getHeight = (() => Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight) - 20);
+    const getWidth = (() => Math.max(body.scrollWidth, body.offsetWidth, html.clientWidth, html.scrollWidth, html.offsetWidth) - 10);
 
     await cheerpjInit();
-    cheerpjCreateDisplay(width, height);
+    const frame = cheerpjCreateDisplay(getWidth(), getHeight());
+
+    function fit() {
+      if (document.fullscreenElement)
+          return;
+
+      frame.style.width  = getWidth() + 'px';
+      frame.style.height = getHeight() + 'px';
+    }
+    window.addEventListener('resize', fit);
+    setInterval(fit, 300);
+
     await cheerpjRunJar("/app/photoelectric/static/photoelectric_de.jar");     // CheerpJ requires the /app prefix
-    </script>
+  </script>
 </body>
 </html>
